@@ -1,5 +1,5 @@
 ############################################################## 
-# Date: 20/01/16
+# Date: 20/01/17
 # Name: calc_drag2D_ALL.py
 # Author: Alek Petty
 # Description: Script to calculate 1D drag quantities
@@ -7,9 +7,7 @@
 
 import matplotlib
 matplotlib.use("AGG")
-# basemap import
 from mpl_toolkits.basemap import Basemap, shiftgrid
-# Numpy import
 import numpy as np
 import mpl_toolkits.basemap.pyproj as pyproj
 from pylab import *
@@ -17,8 +15,6 @@ import IB_functions as ro
 import numpy.ma as ma
 from scipy.interpolate import griddata
 import os
-#mpl.rc('text', usetex=True)
-#mplot = Basemap(projection='npstere',boundinglat=66,lon_0=0, resolution='l'  )
 
 def calc_mean_height_dist1d(year):
 	mean_xpts=[]
@@ -79,7 +75,7 @@ ftype='1km_xyres2m_'+str(thresh)+'cm'+fadd
 
 
 figpath = '../Figures/Drag/'
-datapath1D='../Data_output/'+ftype+'/1D/'
+datapath1D='../DataOutput/'+ftype+'/1D/'
 outpath= datapath1D+'ATMO/'
 rawdatapath='../../../../DATA/'
 
